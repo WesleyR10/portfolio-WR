@@ -21,7 +21,7 @@
     "@react-three/drei": "^9.112.0",
     "@react-three/fiber": "^8.17.7",
     "@svgr/webpack": "^8.1.0",
-    "@t3-oss/env-nextjs": "^0.11.0",
+    "@t3-oss/env-nextjs": "^0.11.1",
     "@tabler/core": "^1.0.0-beta21",
     "@types/three": "^0.168.0",
     "class-variance-authority": "^0.7.0",
