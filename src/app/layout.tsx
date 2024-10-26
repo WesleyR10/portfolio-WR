@@ -2,8 +2,8 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Image from 'next/image'
 
-import { TextHoverEffect } from '@/components/aceternity/text-hover'
 import { Navbar } from '@/components/menu-navbar'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,11 +21,13 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-        <div className="flex bg-slate-600 px-8 py-4">
-          <div className="flex h-14 justify-center pl-2">
-            <span className="font-r text-2xl">Wesley Ribas</span>
+        <div className="bg-[url('/background/Desktop/Menu.png')] bg-cover bg-left">
+          <div className="flex px-8 py-4">
+            <div className="flex h-14 justify-center pl-2">
+              <Image src="/WR.png" alt="Logo Wesley Ribas" width={138} height={76} />
+            </div>
+            <Navbar className="top-4" />
           </div>
-          <Navbar className="top-4" />
         </div>
         {children}
       </body>

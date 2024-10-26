@@ -21,14 +21,14 @@ export const HeroSection: React.FC<{ personalData: PersonalData }> = ({
 }) => {
   return (
     <BackgroundBeamsWithCollision>
-      <section className="relative flex flex-col items-center justify-between overflow-hidden py-4 lg:py-12">
+      <section className="relative flex flex-col items-center justify-between overflow-hidden h-full py-4 lg:py-12 bg-[url('/background/Desktop/MenuSkills.png')] bg-cover">
         <div className="grid grid-cols-1 items-start gap-y-8 lg:grid-cols-2 lg:gap-12">
-          <div className="order-2 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:order-1 lg:pt-10">
+          <div className="order-2 flex flex-col items-start justify-center p-8 pb-20 md:pb-10 lg:order-1 lg:pt-10">
             <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
               Olá, <br />
-              Eu sou <span className="text-pink-500">{personalData.name}</span>
+              Eu sou <span>{personalData.name}</span>
               {` , um `}
-              <span className="text-[#16f2b3]">{personalData.designation}</span>
+              <span>{personalData.designation}</span>
               .
             </h1>
 
@@ -36,14 +36,14 @@ export const HeroSection: React.FC<{ personalData: PersonalData }> = ({
               <Link
                 href={personalData.github}
                 target="_blank"
-                className="text-pink-500 transition-all duration-300 hover:scale-125"
+                className="text-white transition-all duration-300 hover:scale-125"
               >
                 <BsGithub size={30} />
               </Link>
               <Link
                 href={personalData.linkedIn}
                 target="_blank"
-                className="text-pink-500 transition-all duration-300 hover:scale-125"
+                className="text-white transition-all duration-300 hover:scale-125"
               >
                 <BsLinkedin size={30} />
               </Link>
