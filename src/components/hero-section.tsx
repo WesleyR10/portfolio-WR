@@ -21,15 +21,14 @@ export const HeroSection: React.FC<{ personalData: PersonalData }> = ({
 }) => {
   return (
     <BackgroundBeamsWithCollision>
-      <section className="relative flex flex-col items-center justify-between overflow-hidden h-full py-4 lg:py-12 bg-[url('/background/Desktop/MenuSkills.png')] bg-cover">
+      <section className="relative flex h-full flex-col items-center justify-between overflow-hidden bg-[url('/background/Desktop/MenuSkills.png')] bg-cover py-4 lg:py-12">
         <div className="grid grid-cols-1 items-start gap-y-8 lg:grid-cols-2 lg:gap-12">
           <div className="order-2 flex flex-col items-start justify-center p-8 pb-20 md:pb-10 lg:order-1 lg:pt-10">
             <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
               Olá, <br />
               Eu sou <span>{personalData.name}</span>
               {` , um `}
-              <span>{personalData.designation}</span>
-              .
+              <span>{personalData.designation}</span>.
             </h1>
 
             <div className="my-12 flex items-center gap-5">

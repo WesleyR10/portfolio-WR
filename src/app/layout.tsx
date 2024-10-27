@@ -24,7 +24,12 @@ export default function RootLayout({
         <div className="bg-[url('/background/Desktop/Menu.png')] bg-cover bg-left">
           <div className="flex px-8 py-4">
             <div className="flex h-14 justify-center pl-2">
-              <Image src="/WR.png" alt="Logo Wesley Ribas" width={138} height={76} />
+              <Image
+                src="/WR.png"
+                alt="Logo Wesley Ribas"
+                width={138}
+                height={76}
+              />
             </div>
             <Navbar className="top-4" />
           </div>

@@ -45,7 +45,6 @@ export default function Home() {
       <EducationSection />
 
       <section className="bg-[url('/background/Desktop/fundoBoneco.png')] bg-cover">
-
         <div className="flex justify-center lg:py-8">
           <div className="flex items-center">
             <span className="h-[2px] w-24 bg-[#1a1443]"></span>
@@ -57,8 +56,8 @@ export default function Home() {
         </div>
 
         <div className="flex">
-          <div className="mt-12 grid grid-cols-1 gap-16 lg:grid-cols-3 mx-auto">
-            <div className="relative col-span-1 ">
+          <div className="mx-auto mt-12 grid grid-cols-1 gap-16 lg:grid-cols-3">
+            <div className="relative col-span-1">
               <DeveloperInstructions />
               <Canvas>
                 <Suspense fallback={<CanvasLoader />}>
@@ -97,8 +96,8 @@ export default function Home() {
                       <div className="mt-2 h-full w-0.5 flex-1 bg-white group-last:hidden" />
                     </div>
 
-                    <div className="px-2.5 py-5 sm:p-5 max-w-[400px]">
-                      <p className="text-white font-bold">{item.name}</p>
+                    <div className="max-w-[400px] px-2.5 py-5 sm:p-5">
+                      <p className="font-bold text-white">{item.name}</p>
                       <p className="mb-5 text-sm text-white">
                         {item.pos} -- <span>{item.duration}</span>
                       </p>

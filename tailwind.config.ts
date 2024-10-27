@@ -97,27 +97,27 @@ const config = {
         },
         aurora: {
           from: {
-            backgroundPosition: "50% 50%, 50% 50%",
+            backgroundPosition: '50% 50%, 50% 50%',
           },
           to: {
-            backgroundPosition: "350% 50%, 350% 50%",
+            backgroundPosition: '350% 50%, 350% 50%',
           },
         },
         shimmer: {
           from: {
-            "backgroundPosition": "0 0"
+            backgroundPosition: '0 0',
           },
           to: {
-            "backgroundPosition": "-200% 0"
-          }
+            backgroundPosition: '-200% 0',
+          },
         },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'meteor-effect': 'meteor 5s linear infinite',
-        aurora: "aurora 60s linear infinite",
-        shimmer: "shimmer 2s linear infinite",
+        aurora: 'aurora 60s linear infinite',
+        shimmer: 'shimmer 2s linear infinite',
       },
     },
   },
@@ -136,4 +136,3 @@ function addVariablesForColors({ addBase, theme }: any) {
 }
 
 export default config
-      

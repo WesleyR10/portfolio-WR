@@ -1,4 +1,4 @@
-import {StaticImageData} from 'next/image'
+import { StaticImageData } from 'next/image'
 
 import DockerIcon from '/public/icons/docker.svg'
 import FastifyIcon from '/public/icons/fastify.svg'

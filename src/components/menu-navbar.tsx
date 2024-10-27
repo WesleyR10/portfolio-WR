@@ -12,9 +12,7 @@ import { cn } from '@/lib/utils'
 export function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null)
   return (
-    <div
-      className={cn('inset-x-0 top-10 z-50 mx-auto max-w-lg', className)}
-    >
+    <div className={cn('inset-x-0 top-10 z-50 mx-auto max-w-lg', className)}>
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Home">
           <div className="flex flex-col space-y-4 text-sm">
