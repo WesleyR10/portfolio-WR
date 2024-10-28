@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import Image from 'next/image'
 
 import { Navbar } from '@/components/menu-navbar'
+import TransitionProvider from '@/components/transitionProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,7 +35,9 @@ export default function RootLayout({
             <Navbar className="top-4" />
           </div>
         </div>
+        <TransitionProvider>
         {children}
+        </TransitionProvider>
       </body>
     </html>
   )

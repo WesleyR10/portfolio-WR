@@ -15,9 +15,9 @@ import { portfolioProjects } from '@/utils/projects'
 
 export const ProjectsSection = () => {
   return (
-    <section className="bg-gray-800 py-20 lg:py-28" id="projects">
+    <section className="bg-[url('/background/Desktop/fundoBoneco.png')] bg-cover py-20 lg:py-28" id="projects">
       <div className="container">
-        <h2 className="mt-6 text-center font-serif text-3xl md:text-5xl">
+        <h2 className="mt-6 text-center font-serif text-white text-3xl md:text-5xl">
           Projetos em destaque
         </h2>
         <p className="mx-auto my-4 max-w-md text-center text-white/60 md:text-lg lg:text-xl">
