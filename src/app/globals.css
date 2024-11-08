@@ -67,3 +67,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1224;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2153;
+  border-radius: 4px;
+}

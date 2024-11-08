@@ -1,80 +1,81 @@
 'use client'
+
+import { Code2, FolderGit2, Home, Mail, Menu, User, X } from 'lucide-react'
+import Link from 'next/link'
 import { useState } from 'react'
 
-import {
-  HoveredLink,
-  Menu,
-  MenuItem,
-  ProductItem,
-} from '@/components/aceternity/navbar-menu'
+import { Button } from '@/components/ui/button'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
+
+const routes = [
+  { name: 'Home', path: '/', icon: Home },
+  { name: 'Skills', path: '/skills', icon: Code2 },
+  { name: 'Projetos', path: '/projects', icon: FolderGit2 },
+  { name: 'About', path: '/about', icon: User },
+]
 
 export function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null)
+  const [isSheetOpen, setIsSheetOpen] = useState(false)
+
+  const handleLinkClick = (routeName: string) => {
+    setActive(routeName)
+    setIsSheetOpen(false) // Fecha o Sheet
+  }
+
   return (
-    <div className={cn('inset-x-0 top-10 z-50 mx-auto max-w-lg', className)}>
-      <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Home">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Web Development</HoveredLink>
-            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink href="/branding">Branding</HoveredLink>
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Skills">
-          <div className="grid grid-cols-2 gap-10 p-4 text-sm">
-            <ProductItem
-              title="Algochurn"
-              href="https://algochurn.com"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
-              description="Prepare for tech interviews like never before."
-            />
-            <ProductItem
-              title="Tailwind Master Kit"
-              href="https://tailwindmasterkit.com"
-              src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-              description="Production ready Tailwind css components for your next project"
-            />
-            <ProductItem
-              title="Moonbeam"
-              href="https://gomoonbeam.com"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-              description="Never write from scratch again. Go from idea to blog in minutes."
-            />
-            <ProductItem
-              title="Rogue"
-              href="https://userogue.com"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-            />
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Projetos">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/projects">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="About">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Contate-me">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-          </div>
-        </MenuItem>
-      </Menu>
+    <div className={cn('flex h-full w-full justify-end', className)}>
+      <nav className="hidden items-center justify-center space-x-4 rounded-full border border-[#CBACF9] bg-transparent p-4 shadow-input md:flex">
+        {routes.map((route) => (
+          <Link
+            key={route.path}
+            href={route.path}
+            className={cn(
+              'text-sm font-medium transition-colors hover:opacity-[0.9]',
+              active === route.name ? 'text-white' : 'text-white'
+            )}
+            onClick={() => handleLinkClick(route.name)}
+          >
+            {route.name}
+          </Link>
+        ))}
+      </nav>
+
+      {/* Mobile Navigation */}
+      <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+        <SheetTrigger asChild className="md:hidden">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-white hover:bg-transparent hover:opacity-70 [&_svg]:!h-8 [&_svg]:!w-8"
+          >
+            <Menu />
+            <span className="sr-only">Toggle menu</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent
+          side="right"
+          className="w-[300px] border-none bg-[#000319]"
+        >
+          <nav className="mt-8 flex flex-col gap-4">
+            {routes.map((route) => (
+              <Link
+                key={route.path}
+                href={route.path}
+                className={cn(
+                  'flex items-center gap-2 text-sm font-medium transition-colors hover:opacity-[0.9]',
+                  active === route.name ? 'text-white' : 'text-white'
+                )}
+                onClick={() => handleLinkClick(route.name)}
+              >
+                {route.icon && <route.icon className="h-5 w-5 text-white" />}
+                {route.name}
+              </Link>
+            ))}
+          </nav>
+        </SheetContent>
+      </Sheet>
     </div>
   )
 }

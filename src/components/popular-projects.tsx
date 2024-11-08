@@ -21,14 +21,14 @@ export const PopularProjects = () => {
   const projects = portfolioProjects.slice(0, 5)
 
   return (
-    <div className="bg-[url('/background/Desktop/fundoBoneco.png')] bg-cover py-10">
+    <div className="bg-[url('/background/Desktop/fundoBoneco.png')] bg-cover py-10 md:px-3">
       <h2 className="mb-10 text-center text-3xl font-semibold text-white">
         Projetos Populares
       </h2>
-      <div className="mb-8 flex justify-center">
+      <div className="relative mx-auto w-[90%] max-w-[1200px] 2xl:max-w-[1800px]">
         <Carousel
           plugins={[plugin.current]}
-          className="w-full max-w-[1200px] 2xl:max-w-[1800px]"
+          className="w-full"
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
@@ -91,8 +91,8 @@ export const PopularProjects = () => {
               </Card>
             </CarouselItem>
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
         </Carousel>
       </div>
     </div>

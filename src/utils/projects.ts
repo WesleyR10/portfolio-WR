@@ -57,7 +57,11 @@ export const portfolioProjects: PortfolioProject[] = [
       },
       {
         title:
-          'Filtro de Data: Os usuários podem filtrar transações por datas específicas para uma análise mais detalhada.',
+          'Calendário Integrado: Visualize e rastreie suas transações através de uma interface de calendário intuitiva.',
+      },
+      {
+        title:
+          'Reset de Dados: Os usuários podem redefinir seus dados a qualquer momento',
       },
     ],
     link: 'https://finance-wr.vercel.app/',
@@ -147,11 +151,11 @@ export const portfolioProjects: PortfolioProject[] = [
       },
       {
         title:
-          'Integração com Cloudflare: Para um gerenciamento eficiente e seguro de imagens.',
+          'Integração com Cloudflare: Gerenciamento eficiente e seguro de imagens.',
       },
       {
         title:
-          'Dashboard do Profissional: Gerencie serviços, disponibilidade e agendamentos de forma eficiente através do dashboard.',
+          'Dashboard do Profissional: Gerencie serviços, disponibilidade e agendamentos de forma eficiente.',
       },
     ],
     link: 'www.meetflow.tech',
@@ -182,15 +186,15 @@ export const portfolioProjects: PortfolioProject[] = [
     results: [
       {
         title:
-          'Conexão com Google Drive: Integre facilmente o Google Drive à sua conta Fuzzie para acessar e gerenciar arquivos diretamente na plataforma.',
+          'Conexão com Google Drive: Integre o Google Drive à sua conta Fuzzie para acessar e gerenciar arquivos na plataforma.',
       },
       {
         title:
-          'Conexão com Google Drive: Integre facilmente o Google Drive à sua conta Fuzzie para acessar e gerenciar arquivos diretamente na plataforma.',
+          'Integração com Slack e Discord: Envie notificações e mensagens personalizadas para canais do Slack e servidores do Discord.',
       },
       {
         title:
-          'Criação de Fluxos de Automação: Desenvolva sequências de ações que são acionadas por eventos específicos, permitindo a automação de tarefas complexas.',
+          'Fluxos de Automação: Desenvolva sequências de ações para automatizar tarefas complexas.',
       },
       {
         title:
@@ -387,7 +391,12 @@ export const portfolioProjects: PortfolioProject[] = [
         title: 'Tema toggle: alternar entre temas dark, light e system.',
       },
       {
-        title: 'Testes unitários e e2e para o frontend.',
+        title:
+          'Filtros avançados: busca por status, ID, cliente e período de realização.',
+      },
+      {
+        title:
+          'Paginação inteligente: navegação eficiente com limite de itens por página.',
       },
     ],
     link: 'https://github.com/WesleyR10/Pizza.shop',

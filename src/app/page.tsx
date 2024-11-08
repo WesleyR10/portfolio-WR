@@ -3,13 +3,7 @@ import { PerspectiveCamera } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Leva } from 'leva'
 import Image from 'next/image'
-import Link from 'next/link'
-import { Suspense, useState } from 'react'
-import { BsGithub, BsLinkedin } from 'react-icons/bs'
-import { FaFacebook, FaTwitterSquare } from 'react-icons/fa'
-import { MdDownload } from 'react-icons/md'
-import { RiContactsFill } from 'react-icons/ri'
-import { SiLeetcode } from 'react-icons/si'
+import { Suspense } from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 import Cube from '@/components/3D/cube'
@@ -19,10 +13,11 @@ import CanvasLoader from '@/components/3D/Loading'
 import ReactLogo from '@/components/3D/React-logo'
 import Rings from '@/components/3D/Rings'
 import Target from '@/components/3D/Target'
-import { TextHoverEffect } from '@/components/aceternity/text-hover'
+import { ContactForm } from '@/components/contact-form'
+import { CustomCursor } from '@/components/cursor'
 import { EducationSection } from '@/components/education'
+import { Footer } from '@/components/footer'
 import { HeroSection } from '@/components/hero-section'
-import { Navbar } from '@/components/menu-navbar'
 import { PopularProjects } from '@/components/popular-projects'
 import {
   calculateSizes,
@@ -40,13 +35,15 @@ export default function Home() {
 
   return (
     <div>
+      <CustomCursor />
+
       <HeroSection personalData={personalData} />
       <PopularProjects />
       <EducationSection />
 
-      <section className="bg-[url('/background/Desktop/fundoBoneco.png')] bg-cover">
-        <div className="flex justify-center lg:py-8">
-          <div className="flex items-center">
+      <section className="bg-[url('/background/Desktop/fundoBoneco.png')] bg-cover pb-9">
+        <div className="flex justify-center py-2 lg:py-8">
+          <div className="flex max-w-[320px] items-center">
             <span className="h-[2px] w-24 bg-[#1a1443]"></span>
             <span className="w-fit rounded-md bg-[#1a1443] p-2 px-5 text-xl text-white">
               Experiência
@@ -56,10 +53,10 @@ export default function Home() {
         </div>
 
         <div className="flex">
-          <div className="mx-auto mt-12 grid grid-cols-1 gap-16 lg:grid-cols-3">
+          <div className="mx-4 mt-12 grid grid-cols-1 gap-12 sm:mx-auto lg:mx-4 lg:grid-cols-3 xl:mx-auto">
             <div className="relative col-span-1">
               <DeveloperInstructions />
-              <Canvas>
+              <Canvas className="min-h-[550px]">
                 <Suspense fallback={<CanvasLoader />}>
                   <Leva hidden />
                   <PerspectiveCamera makeDefault position={[0, 0, 30]} />
@@ -70,13 +67,13 @@ export default function Home() {
                       rotation={[0.1, -Math.PI, 0]}
                     />
                   </HeroCamera>
-                  <ambientLight intensity={1} />
+                  <ambientLight intensity={1} />1
                   <directionalLight position={[10, 10, 10]} intensity={0.5} />
                 </Suspense>
               </Canvas>
             </div>
 
-            <div className="col-span-2 rounded-lg border border-[#CBACF9]">
+            <div className="col-span-2 rounded-lg border border-[#CBACF9] lg:ml-[218px]">
               <div className="px-2.5 py-5 sm:px-5 sm:py-10">
                 {workExperiences.map((item: WorkExperience) => (
                   <div
@@ -112,6 +109,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ContactForm />
+      <Footer />
     </div>
   )
 }

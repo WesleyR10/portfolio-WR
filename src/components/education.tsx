@@ -14,8 +14,8 @@ export const EducationSection = () => {
         </div>
       </div>
 
-      <div className="my-5 flex justify-center lg:py-8">
-        <div className="flex items-center">
+      <div className="my-5 flex justify-center py-2 lg:py-8">
+        <div className="flex max-w-[320px] items-center">
           <span className="h-[2px] w-24 bg-[#1a1443]"></span>
           <span className="w-fit rounded-md bg-[#1a1443] p-2 px-5 text-xl text-white">
             Formação
@@ -32,10 +32,10 @@ export const EducationSection = () => {
             </div>
           </div>
 
-          <div className="my-auto flex flex-col gap-6">
+          <div className="mx-auto my-auto flex flex-col gap-6 lg:mx-0">
             {educations.map((education) => (
               <div className="relative text-white" key={education.id}>
-                <div className="flex justify-center">
+                <div className="flex max-w-[600px] justify-center">
                   <p className="mb-2 mr-[22px] text-xs text-[#16f2b3] sm:text-sm">
                     {education.duration}
                   </p>
