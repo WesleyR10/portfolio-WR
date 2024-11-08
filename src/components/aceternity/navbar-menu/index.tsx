@@ -17,45 +17,25 @@ export const MenuItem = ({
   setActive,
   active,
   item,
+  href,
   children,
 }: {
   setActive: (item: string) => void
   active: string | null
   item: string
+  href: string
   children?: React.ReactNode
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative">
-      <motion.p
-        transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
-      >
-        {item}
-      </motion.p>
-      {active !== null && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.85, y: 10 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={transition}
+      <Link href={href}>
+        <motion.p
+          transition={{ duration: 0.3 }}
+          className="cursor-pointer text-white hover:opacity-[0.9] dark:text-white"
         >
-          {active === item && (
-            <div className="absolute left-1/2 top-[calc(100%_+_1.2rem)] -translate-x-1/2 transform pt-4">
-              <motion.div
-                transition={transition}
-                layoutId="active" // layoutId ensures smooth animation
-                className="overflow-hidden rounded-2xl border border-black/[0.2] bg-white shadow-xl backdrop-blur-sm dark:border-white/[0.2] dark:bg-black"
-              >
-                <motion.div
-                  layout // layout ensures smooth animation
-                  className="h-full w-max p-4"
-                >
-                  {children}
-                </motion.div>
-              </motion.div>
-            </div>
-          )}
-        </motion.div>
-      )}
+          {item}
+        </motion.p>
+      </Link>
     </div>
   )
 }
@@ -69,8 +49,8 @@ export const Menu = ({
 }) => {
   return (
     <nav
-      onMouseLeave={() => setActive(null)} // resets the state
-      className="relative flex justify-center space-x-4 rounded-full border border-transparent bg-white p-4 shadow-input dark:border-white/[0.2] dark:bg-black"
+      onMouseLeave={() => setActive(null)}
+      className="relative flex justify-center space-x-4 rounded-full border border-[#CBACF9] bg-transparent p-4 shadow-input"
     >
       {children}
     </nav>
@@ -98,10 +78,10 @@ export const ProductItem = ({
         className="flex-shrink-0 rounded-md shadow-2xl"
       />
       <div>
-        <h4 className="mb-1 text-xl font-bold text-black dark:text-white">
+        <h4 className="mb-1 text-xl font-bold text-white dark:text-white">
           {title}
         </h4>
-        <p className="max-w-[10rem] text-sm text-neutral-700 dark:text-neutral-300">
+        <p className="max-w-[10rem] text-sm text-white dark:text-neutral-300">
           {description}
         </p>
       </div>

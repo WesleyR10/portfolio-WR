@@ -21,29 +21,28 @@ export const HeroSection: React.FC<{ personalData: PersonalData }> = ({
 }) => {
   return (
     <BackgroundBeamsWithCollision>
-      <section className="relative flex flex-col items-center justify-between overflow-hidden py-4 lg:py-12">
+      <section className="relative flex h-full flex-col items-center justify-between overflow-hidden bg-[url('/background/Desktop/MenuSkills.png')] bg-cover py-4 lg:py-12">
         <div className="grid grid-cols-1 items-start gap-y-8 lg:grid-cols-2 lg:gap-12">
-          <div className="order-2 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:order-1 lg:pt-10">
+          <div className="order-2 flex flex-col items-start justify-center p-8 pb-20 md:pb-10 lg:order-1 lg:pt-10">
             <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
               Olá, <br />
-              Eu sou <span className="text-pink-500">{personalData.name}</span>
+              Eu sou <span>{personalData.name}</span>
               {` , um `}
-              <span className="text-[#16f2b3]">{personalData.designation}</span>
-              .
+              <span>{personalData.designation}</span>.
             </h1>
 
             <div className="my-12 flex items-center gap-5">
               <Link
                 href={personalData.github}
                 target="_blank"
-                className="text-pink-500 transition-all duration-300 hover:scale-125"
+                className="text-white transition-all duration-300 hover:scale-125"
               >
                 <BsGithub size={30} />
               </Link>
               <Link
                 href={personalData.linkedIn}
                 target="_blank"
-                className="text-pink-500 transition-all duration-300 hover:scale-125"
+                className="text-white transition-all duration-300 hover:scale-125"
               >
                 <BsLinkedin size={30} />
               </Link>
@@ -51,7 +50,7 @@ export const HeroSection: React.FC<{ personalData: PersonalData }> = ({
 
             <div className="flex items-center gap-3">
               <Link
-                href="#contact"
+                href="https://api.whatsapp.com/send?phone=5531973219539"
                 className="rounded-full bg-gradient-to-r from-violet-600 to-pink-500 p-[1px] transition-all duration-300 hover:from-pink-500 hover:to-violet-600"
               >
                 <button className="flex items-center gap-1 rounded-full border-none bg-[#0d1224] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out hover:gap-3 md:px-8 md:py-4 md:text-sm md:font-semibold">

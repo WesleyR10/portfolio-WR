@@ -2,9 +2,12 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { TextHoverEffect } from '@/components/aceternity/text-hover'
+import { HtmlWrapper } from '@/components/html-wrapper'
 import { Navbar } from '@/components/menu-navbar'
+import { Toaster } from '@/components/ui/toaster'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,15 +23,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>
-        <div className="flex bg-slate-600 px-8 py-4">
-          <div className="flex h-14 justify-center pl-2">
-            <span className="font-r text-2xl">Wesley Ribas</span>
+      <HtmlWrapper>
+        <body className={`${inter.className} relative antialiased`}>
+          <div className="w-full bg-[url('/background/Desktop/Menu.png')] bg-cover bg-left">
+            <div className="mx-auto flex items-center justify-between px-8 py-4">
+              <div className="flex h-14 cursor-pointer justify-center">
+                <Link href="/">
+                  <Image
+                    src="/WR.png"
+                    alt="Logo Wesley Ribas"
+                    width={138}
+                    height={76}
+                  />
+                </Link>
+              </div>
+              <Navbar className="flex flex-grow justify-end lg:justify-center" />
+              <div className="hidden w-[138px] md:block"></div>
+            </div>
           </div>
-          <Navbar className="top-4" />
-        </div>
-        {children}
-      </body>
+          {children}
+          <Toaster />
+        </body>
+      </HtmlWrapper>
     </html>
   )
 }

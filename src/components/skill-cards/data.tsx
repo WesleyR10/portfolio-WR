@@ -1,6 +1,8 @@
 import {
   Brain,
+  Code2,
   Cog,
+  Layout,
   Lightbulb,
   MessageCircle,
   Network,
@@ -28,9 +30,9 @@ export const skillsData = [
   },
   {
     icon: <Brain className="md:h-7 md:w-7" />,
-    title: 'Gestão Holística de TI',
+    title: 'Desenvolvimento Ágil',
     description:
-      'Com conhecimento sobre diversas áreas de TI, ofereço uma abordagem integrada aos projetos, supervisionando todas as fases, da idealização à execução.',
+      'Adaptação rápida a novas tecnologias e metodologias, com foco em entrega contínua e aprimoramento constante das soluções.',
   },
   {
     icon: <Rocket className="md:h-7 md:w-7" />,
@@ -43,5 +45,17 @@ export const skillsData = [
     title: 'Proficiência Técnica Avançada',
     description:
       'Munido de habilidades técnicas avançadas, apresento soluções robustas, seguras e adaptadas aos desafios modernos.',
+  },
+  {
+    icon: <Code2 className="md:h-7 md:w-7" />,
+    title: 'Arquitetura de Software',
+    description:
+      'Capacidade de projetar soluções escaláveis e eficientes, aplicando padrões de projeto e práticas modernas de desenvolvimento.',
+  },
+  {
+    icon: <Layout className="md:h-7 md:w-7" />,
+    title: 'Desenvolvimento Web Moderno',
+    description:
+      'Domínio das tecnologias mais recentes para criar interfaces responsivas e APIs robustas, seguindo as melhores práticas do mercado.',
   },
 ]

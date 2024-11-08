@@ -252,7 +252,7 @@ export const DeveloperInstructions = () => {
   ]
 
   return (
-    <div className="right-21 absolute left-2 top-2 z-10 rounded p-2 text-white">
+    <div className="absolute left-1/2 top-2 z-10 -translate-x-1/2 rounded p-2 text-white lg:left-2 lg:translate-x-0">
       <h2 className="text-sm font-bold">Instruções:</h2>
       <ul className="text-xs">
         {instructions.map((instruction, index) => (

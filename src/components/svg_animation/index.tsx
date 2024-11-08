@@ -106,7 +106,7 @@ export const Svg = ({ onSvgClick }: SvgProps) => {
         ({ Component, title, description, softSkills, color }) => (
           <Component
             key={title}
-            className="h-20 w-20"
+            className="h-20 w-20 cursor-pointer"
             onClick={() =>
               onSvgClick({ title, description, softSkills, color })
             }

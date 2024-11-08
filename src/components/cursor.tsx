@@ -18,14 +18,29 @@ export const CustomCursor = () => {
 
   return (
     <motion.div
-      animate={{ x: position.x, y: position.y }}
-      transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-      className="pointer-events-none fixed z-50 h-5 w-5 rounded-full opacity-75"
       style={{
+        position: 'fixed',
+        left: 0,
+        top: 0,
+        zIndex: 50,
+        pointerEvents: 'none',
         backgroundColor: 'rgb(177, 243, 252)',
         boxShadow:
           'rgb(177, 243, 252) 0px 0px 20px 10px, rgb(177, 243, 252) 0px 0px 5px 5px',
-        transform: 'translate(-50%, -50%)',
+        width: '20px',
+        height: '20px',
+        borderRadius: '50%',
+        opacity: 0.75,
+      }}
+      animate={{
+        x: position.x - 10,
+        y: position.y - 10,
+      }}
+      transition={{
+        type: 'spring',
+        stiffness: 500,
+        damping: 30,
+        mass: 0.5,
       }}
     />
   )
