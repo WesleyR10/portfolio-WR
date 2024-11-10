@@ -252,7 +252,7 @@ export const portfolioProjects: PortfolioProject[] = [
           'Permissões: Utiliza CASL para implementar um sistema flexível de autorização.',
       },
     ],
-    link: 'https://github.com/YourUsername/nextjs-saas-rbac',
+    link: 'https://saas-next-js-rbac-web.vercel.app/',
     image: nextjsSaasRbac,
     techIcons: [
       {

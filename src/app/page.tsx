@@ -3,11 +3,11 @@ import { PerspectiveCamera } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Leva } from 'leva'
 import Image from 'next/image'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 import Cube from '@/components/3D/cube'
-import Developer, { DeveloperInstructions } from '@/components/3D/Developer'
+import Developer from '@/components/3D/Developer'
 import HeroCamera from '@/components/3D/Hero-camera'
 import CanvasLoader from '@/components/3D/Loading'
 import ReactLogo from '@/components/3D/React-logo'
@@ -33,6 +33,8 @@ export default function Home() {
 
   const sizes = calculateSizes(isSmall, isMobile, isTablet)
 
+  const [modelMessage, setModelMessage] = useState('Aguarde um momento para ver todas as animações...')
+
   return (
     <div>
       <CustomCursor />
@@ -55,7 +57,10 @@ export default function Home() {
         <div className="flex">
           <div className="mx-4 mt-12 grid grid-cols-1 gap-12 sm:mx-auto lg:mx-4 lg:grid-cols-3 xl:mx-auto">
             <div className="relative col-span-1">
-              <DeveloperInstructions />
+              <div className="absolute left-1/2 top-4 z-10 -translate-x-1/2 rounded-lg px-4 py-2 text-center text-white backdrop-blur-sm">
+                <p className="text-sm font-medium">{modelMessage}</p>
+              </div>
+
               <Canvas className="min-h-[550px]">
                 <Suspense fallback={<CanvasLoader />}>
                   <Leva hidden />
@@ -65,9 +70,10 @@ export default function Home() {
                       scale={sizes.deskScale}
                       position={sizes.deskPosition}
                       rotation={[0.1, -Math.PI, 0]}
+                      onMessageChange={setModelMessage}
                     />
                   </HeroCamera>
-                  <ambientLight intensity={1} />1
+                  <ambientLight intensity={1} />
                   <directionalLight position={[10, 10, 10]} intensity={0.5} />
                 </Suspense>
               </Canvas>
