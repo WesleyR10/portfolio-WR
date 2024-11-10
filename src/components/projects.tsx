@@ -111,7 +111,7 @@ export const ProjectsSection = () => {
                                 <TooltipTrigger asChild>
                                   <div>
                                     {React.createElement(icon.icon, {
-                                      className: 'size-6 lg:size-8 mr-2',
+                                      className: 'size-6 lg:size-8 mr-2  transition-transform duration-300 ease-in-out transform hover:scale-125',
                                     })}
                                   </div>
                                 </TooltipTrigger>

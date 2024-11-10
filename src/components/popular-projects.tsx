@@ -42,9 +42,9 @@ export const PopularProjects = () => {
                         <Image
                           src={project.image}
                           alt={project.title}
-                          layout="fill"
-                          objectFit="cover"
                           className="rounded-md"
+                          fill
+                          style={{ objectFit: 'cover' }}
                         />
                       )}
                     </div>
