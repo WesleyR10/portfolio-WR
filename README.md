@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfólio Wesley Ribas
 
-## Getting Started
+<p align="center">
+<img src="https://i.ibb.co/SVXq0ck/Portfolio-WR-desktop-1.png" alt="Portfolio-WR-desktop-1" border="0">
+</p>
 
-First, run the development server:
+## 🚀 Sobre o Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este é meu portfólio profissional, desenvolvido com tecnologias modernas para demonstrar minhas habilidades e projetos como Desenvolvedor Full Stack. O site apresenta uma interface interativa com animações 3D, design responsivo e várias seções informativas sobre minha experiência e competências.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Características Principais
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Modelo 3D Interativo**: Personagem 3D animado com diferentes interações
+- **Design Responsivo**: Interface adaptável para diferentes dispositivos
+- **Animações Suaves**: Utilizando Framer Motion para transições fluidas
+- **Formulário de Contato**: Integração com sistema de email
+- **Carrossel de Projetos**: Showcase dos principais projetos
+- **Tema Dark**: Interface moderna com tema escuro
+- **Visualização de Habilidades**: Seção interativa mostrando tecnologias e soft skills
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🛠 Tecnologias Utilizadas
 
-## Learn More
+### Frontend
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Three.js / React Three Fiber
+- Radix UI
+- Embla Carousel
 
-To learn more about Next.js, take a look at the following resources:
+### Modelagem 3D e Animações
+- Three.js
+- React Three Fiber
+- React Three Drei
+- GSAP
+- Lottie React
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Formulários e Validação
+- React Hook Form
+- Zod
+- Nodemailer
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Estilização
+- Tailwind CSS
+- Tailwind Merge
+- Lucide Icons
 
-## Deploy on Vercel
+### Desenvolvimento
+- ESLint
+- Prettier
+- Husky
+- Lint Staged
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎯 Funcionalidades Principais
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Seção Hero
+- Apresentação inicial com animação 3D
+- Links para redes sociais
+- Botões de call-to-action
+
+### Projetos
+- Carrossel de projetos em destaque
+- Detalhes sobre tecnologias utilizadas
+- Links para demonstrações ao vivo
+
+### Habilidades
+- Visualização interativa de tecnologias
+- Switch entre hard skills e soft skills
+- Cards com efeitos de hover
+
+### Sobre
+- Biografia profissional
+- Objetivos de carreira
+- Competências técnicas
+
+### Contato
+- Formulário de contato com validação
+- Integração com email
+- Máscara de telefone
